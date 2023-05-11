@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>The first | Aurora and Anchor</title>
+  <title>Aurora and Anchor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to 我的语雀! 5.3 日 02：21">
+  <meta name="description" content="CTFshowMISC入门图片类型题目解题思路 winHex打开查看  文件头尾的缺失和错误  直接搜索flag，key等    bpg文件使用对应查看器honeyview  图片flag使用识字工具查看  查看是否图片内含有其他文件  kali中binwalk打开分离  binwalk filename查看  binwalk -e filename分离   binwalk无法正确分离，使用for">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The first">
-<meta property="og:url" content="http://example.com/2023/05/03/The-first/index.html">
+<meta property="og:title" content="Aurora and Anchor">
+<meta property="og:url" content="http://example.com/2023/05/11/CTFshow/index.html">
 <meta property="og:site_name" content="Aurora and Anchor">
-<meta property="og:description" content="Welcome to 我的语雀! 5.3 日 02：21">
+<meta property="og:description" content="CTFshowMISC入门图片类型题目解题思路 winHex打开查看  文件头尾的缺失和错误  直接搜索flag，key等    bpg文件使用对应查看器honeyview  图片flag使用识字工具查看  查看是否图片内含有其他文件  kali中binwalk打开分离  binwalk filename查看  binwalk -e filename分离   binwalk无法正确分离，使用for">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-02T17:02:06.000Z">
-<meta property="article:modified_time" content="2023-05-02T18:22:09.437Z">
+<meta property="article:published_time" content="2023-05-11T04:19:46.393Z">
+<meta property="article:modified_time" content="2023-05-11T04:19:04.956Z">
 <meta property="article:author" content="Aurora">
 <meta name="twitter:card" content="summary">
   
@@ -77,34 +77,66 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-The-first" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-CTFshow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/03/The-first/" class="article-date">
-  <time class="dt-published" datetime="2023-05-02T17:02:06.000Z" itemprop="datePublished">2023-05-03</time>
+    <a href="/2023/05/11/CTFshow/" class="article-date">
+  <time class="dt-published" datetime="2023-05-11T04:19:46.393Z" itemprop="datePublished">2023-05-11</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      The first
-    </h1>
-  
-
-      </header>
-    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://www.yuque.com/yuqueyonghuauzfd9">我的语雀</a>! 5.3 日 02：21</p>
+        <h1 id="CTFshow"><a href="#CTFshow" class="headerlink" title="CTFshow"></a>CTFshow</h1><h2 id="MISC入门"><a href="#MISC入门" class="headerlink" title="MISC入门"></a>MISC入门</h2><h3 id="图片类型题目解题思路"><a href="#图片类型题目解题思路" class="headerlink" title="图片类型题目解题思路"></a>图片类型题目解题思路</h3><ul>
+<li><p><strong>winHex打开查看</strong></p>
+<ul>
+<li><p>文件头尾的缺失和错误</p>
+</li>
+<li><p>直接搜索flag，key等</p>
+</li>
+</ul>
+</li>
+<li><p><strong>bpg文件使用对应查看器honeyview</strong></p>
+</li>
+<li><p><strong>图片flag使用识字工具查看</strong></p>
+</li>
+<li><p><strong>查看是否图片内含有其他文件</strong></p>
+<ul>
+<li><p>kali中<strong>binwalk</strong>打开分离</p>
+<ul>
+<li><code>binwalk filename查看</code>  <code>binwalk -e filename分离</code></li>
+</ul>
+</li>
+<li><p>binwalk无法正确分离，使用<strong>foremost</strong></p>
+<ul>
+<li><code>foremost filename -o outputfilename</code></li>
+</ul>
+</li>
+<li><p>文件自动分离出错时，使用<strong>dd手动分离</strong></p>
+<ul>
+<li><code>dd if=filename of=outfilename bs=1 skip=开始分离的字节数 count=分割个数</code><ul>
+<li>bs：同时设置读写块的大小为bytes</li>
+<li>skip：从输入文件开头跳过多少个blocks个块后开始复制</li>
+<li>count：读写块个数个数</li>
+</ul>
+</li>
+<li>binwalk显示zip文件从22895开始，到23046为其结束<ul>
+<li><code>dd if=sim.jpg of=11.zip bs=1 count=23046 skip=22895</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/03/The-first/" data-id="clhimffql0002esicb145134m" data-title="The first" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/11/CTFshow/" data-id="clhimffqh0001esic6k362qzw" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -114,15 +146,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前一篇</strong>
-      <div class="article-nav-title">
-        
-          Hexo+阿里云服务器（宝塔面板）
-        
-      </div>
-    </a>
   
+    <a href="/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Hexo+阿里云服务器（宝塔面板）</div>
+    </a>
   
 </nav>
 
