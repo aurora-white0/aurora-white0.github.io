@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Aurora and Anchor</title>
+  <title>CTFshow | Aurora and Anchor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="CTFshowMISC入门图片类型题目解题思路 winHex打开查看  文件头尾的缺失和错误  直接搜索flag，key等    bpg文件使用对应查看器honeyview  图片flag使用识字工具查看  查看是否图片内含有其他文件  kali中binwalk打开分离  binwalk filename查看  binwalk -e filename分离   binwalk无法正确分离，使用for">
+  <meta name="description" content="CTFshowMISC 入门图片类型题目解题思路 winHex 打开查看  文件头尾的缺失和错误  直接搜索 flag，key 等    bpg 文件使用对应查看器 honeyview  图片 flag 使用识字工具查看  查看是否图片内含有其他文件  kali 中binwalk打开分离  binwalk filename查看 binwalk -e filename分离   binwalk 无法正">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aurora and Anchor">
+<meta property="og:title" content="CTFshow">
 <meta property="og:url" content="http://example.com/2023/05/11/CTFshow/index.html">
 <meta property="og:site_name" content="Aurora and Anchor">
-<meta property="og:description" content="CTFshowMISC入门图片类型题目解题思路 winHex打开查看  文件头尾的缺失和错误  直接搜索flag，key等    bpg文件使用对应查看器honeyview  图片flag使用识字工具查看  查看是否图片内含有其他文件  kali中binwalk打开分离  binwalk filename查看  binwalk -e filename分离   binwalk无法正确分离，使用for">
+<meta property="og:description" content="CTFshowMISC 入门图片类型题目解题思路 winHex 打开查看  文件头尾的缺失和错误  直接搜索 flag，key 等    bpg 文件使用对应查看器 honeyview  图片 flag 使用识字工具查看  查看是否图片内含有其他文件  kali 中binwalk打开分离  binwalk filename查看 binwalk -e filename分离   binwalk 无法正">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-11T04:19:46.393Z">
-<meta property="article:modified_time" content="2023-05-11T04:19:04.956Z">
+<meta property="article:published_time" content="2023-05-11T04:21:00.000Z">
+<meta property="article:modified_time" content="2023-05-11T04:21:37.325Z">
 <meta property="article:author" content="Aurora">
 <meta name="twitter:card" content="summary">
   
@@ -80,49 +80,59 @@
         <section id="main"><article id="post-CTFshow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/11/CTFshow/" class="article-date">
-  <time class="dt-published" datetime="2023-05-11T04:19:46.393Z" itemprop="datePublished">2023-05-11</time>
+  <time class="dt-published" datetime="2023-05-11T04:21:00.000Z" itemprop="datePublished">2023-05-11</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      CTFshow
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="CTFshow"><a href="#CTFshow" class="headerlink" title="CTFshow"></a>CTFshow</h1><h2 id="MISC入门"><a href="#MISC入门" class="headerlink" title="MISC入门"></a>MISC入门</h2><h3 id="图片类型题目解题思路"><a href="#图片类型题目解题思路" class="headerlink" title="图片类型题目解题思路"></a>图片类型题目解题思路</h3><ul>
-<li><p><strong>winHex打开查看</strong></p>
+        <h1 id="CTFshow"><a href="#CTFshow" class="headerlink" title="CTFshow"></a>CTFshow</h1><h2 id="MISC-入门"><a href="#MISC-入门" class="headerlink" title="MISC 入门"></a>MISC 入门</h2><h3 id="图片类型题目解题思路"><a href="#图片类型题目解题思路" class="headerlink" title="图片类型题目解题思路"></a>图片类型题目解题思路</h3><ul>
+<li><p><strong>winHex 打开查看</strong></p>
 <ul>
 <li><p>文件头尾的缺失和错误</p>
 </li>
-<li><p>直接搜索flag，key等</p>
+<li><p>直接搜索 flag，key 等</p>
 </li>
 </ul>
 </li>
-<li><p><strong>bpg文件使用对应查看器honeyview</strong></p>
+<li><p><strong>bpg 文件使用对应查看器 honeyview</strong></p>
 </li>
-<li><p><strong>图片flag使用识字工具查看</strong></p>
+<li><p><strong>图片 flag 使用识字工具查看</strong></p>
 </li>
 <li><p><strong>查看是否图片内含有其他文件</strong></p>
 <ul>
-<li><p>kali中<strong>binwalk</strong>打开分离</p>
+<li><p>kali 中<strong>binwalk</strong>打开分离</p>
 <ul>
-<li><code>binwalk filename查看</code>  <code>binwalk -e filename分离</code></li>
+<li><code>binwalk filename查看</code> <code>binwalk -e filename分离</code></li>
 </ul>
 </li>
-<li><p>binwalk无法正确分离，使用<strong>foremost</strong></p>
+<li><p>binwalk 无法正确分离，使用<strong>foremost</strong></p>
 <ul>
 <li><code>foremost filename -o outputfilename</code></li>
 </ul>
 </li>
-<li><p>文件自动分离出错时，使用<strong>dd手动分离</strong></p>
+<li><p>文件自动分离出错时，使用<strong>dd 手动分离</strong></p>
 <ul>
 <li><code>dd if=filename of=outfilename bs=1 skip=开始分离的字节数 count=分割个数</code><ul>
-<li>bs：同时设置读写块的大小为bytes</li>
-<li>skip：从输入文件开头跳过多少个blocks个块后开始复制</li>
+<li>bs：同时设置读写块的大小为 bytes</li>
+<li>skip：从输入文件开头跳过多少个 blocks 个块后开始复制</li>
 <li>count：读写块个数个数</li>
 </ul>
 </li>
-<li>binwalk显示zip文件从22895开始，到23046为其结束<ul>
+<li>binwalk 显示 zip 文件从 22895 开始，到 23046 为其结束<ul>
 <li><code>dd if=sim.jpg of=11.zip bs=1 count=23046 skip=22895</code></li>
 </ul>
 </li>
@@ -136,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/11/CTFshow/" data-id="clhimffqh0001esic6k362qzw" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/11/CTFshow/" data-id="clhimhp9q0002ysicgngq8zt6" data-title="CTFshow" class="article-share-link">分享</a>
       
       
       
@@ -187,7 +197,7 @@
       <ul>
         
           <li>
-            <a href="/2023/05/11/CTFshow/">(no title)</a>
+            <a href="/2023/05/11/CTFshow/">CTFshow</a>
           </li>
         
           <li>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-11T04:19:04.956Z</updated>
+  <updated>2023-05-11T04:21:37.325Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>CTFshow</title>
     <link href="http://example.com/2023/05/11/CTFshow/"/>
     <id>http://example.com/2023/05/11/CTFshow/</id>
-    <published>2023-05-11T04:19:46.393Z</published>
-    <updated>2023-05-11T04:19:04.956Z</updated>
+    <published>2023-05-11T04:21:00.000Z</published>
+    <updated>2023-05-11T04:21:37.325Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="CTFshow"><a href="#CTFshow" class="headerlink" title="CTFshow"></a>CTFshow</h1><h2 id="MISC入门"><a href="#MISC入门" class="headerlink" title="MISC入门"></a>MISC入门</h2><h3 id="图片类型题目解题思路"><a href="#图片类型题目解题思路" class="headerlink" title="图片类型题目解题思路"></a>图片类型题目解题思路</h3><ul><li><p><strong>winHex打开查看</strong></p><ul><li><p>文件头尾的缺失和错误</p></li><li><p>直接搜索flag，key等</p></li></ul></li><li><p><strong>bpg文件使用对应查看器honeyview</strong></p></li><li><p><strong>图片flag使用识字工具查看</strong></p></li><li><p><strong>查看是否图片内含有其他文件</strong></p><ul><li><p>kali中<strong>binwalk</strong>打开分离</p><ul><li><code>binwalk filename查看</code>  <code>binwalk -e filename分离</code></li></ul></li><li><p>binwalk无法正确分离，使用<strong>foremost</strong></p><ul><li><code>foremost filename -o outputfilename</code></li></ul></li><li><p>文件自动分离出错时，使用<strong>dd手动分离</strong></p><ul><li><code>dd if=filename of=outfilename bs=1 skip=开始分离的字节数 count=分割个数</code><ul><li>bs：同时设置读写块的大小为bytes</li><li>skip：从输入文件开头跳过多少个blocks个块后开始复制</li><li>count：读写块个数个数</li></ul></li><li>binwalk显示zip文件从22895开始，到23046为其结束<ul><li><code>dd if=sim.jpg of=11.zip bs=1 count=23046 skip=22895</code></li></ul></li></ul></li></ul></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="CTFshow"><a href="#CTFshow" class="headerlink" title="CTFshow"></a>CTFshow</h1><h2 id="MISC-入门"><a href="#MISC-入门" class="headerlink" title="MISC 入门"></a>MISC 入门</h2><h3 id="图片类型题目解题思路"><a href="#图片类型题目解题思路" class="headerlink" title="图片类型题目解题思路"></a>图片类型题目解题思路</h3><ul><li><p><strong>winHex 打开查看</strong></p><ul><li><p>文件头尾的缺失和错误</p></li><li><p>直接搜索 flag，key 等</p></li></ul></li><li><p><strong>bpg 文件使用对应查看器 honeyview</strong></p></li><li><p><strong>图片 flag 使用识字工具查看</strong></p></li><li><p><strong>查看是否图片内含有其他文件</strong></p><ul><li><p>kali 中<strong>binwalk</strong>打开分离</p><ul><li><code>binwalk filename查看</code> <code>binwalk -e filename分离</code></li></ul></li><li><p>binwalk 无法正确分离，使用<strong>foremost</strong></p><ul><li><code>foremost filename -o outputfilename</code></li></ul></li><li><p>文件自动分离出错时，使用<strong>dd 手动分离</strong></p><ul><li><code>dd if=filename of=outfilename bs=1 skip=开始分离的字节数 count=分割个数</code><ul><li>bs：同时设置读写块的大小为 bytes</li><li>skip：从输入文件开头跳过多少个 blocks 个块后开始复制</li><li>count：读写块个数个数</li></ul></li><li>binwalk 显示 zip 文件从 22895 开始，到 23046 为其结束<ul><li><code>dd if=sim.jpg of=11.zip bs=1 count=23046 skip=22895</code></li></ul></li></ul></li></ul></li><li></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;CTFshow&quot;&gt;&lt;a href=&quot;#CTFshow&quot; class=&quot;headerlink&quot; title=&quot;CTFshow&quot;&gt;&lt;/a&gt;CTFshow&lt;/h1&gt;&lt;h2 id=&quot;MISC入门&quot;&gt;&lt;a href=&quot;#MISC入门&quot; class=&quot;headerlink&quot; </summary>
+    <summary type="html">&lt;h1 id=&quot;CTFshow&quot;&gt;&lt;a href=&quot;#CTFshow&quot; class=&quot;headerlink&quot; title=&quot;CTFshow&quot;&gt;&lt;/a&gt;CTFshow&lt;/h1&gt;&lt;h2 id=&quot;MISC-入门&quot;&gt;&lt;a href=&quot;#MISC-入门&quot; class=&quot;headerlink</summary>
       
     
     
