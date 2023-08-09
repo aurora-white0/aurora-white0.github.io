@@ -19,25 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"aurora-white0.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="努力变成高手">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aur0ra">
-<meta property="og:url" content="https://aurora-white0.github.io/index.html">
+    <meta name="description" content="Hexo 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 Markdown 作为书写语言，极大地方便了博客的撰写。静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。  在服务器上搭建 Git 环境，创建 Git 仓库 在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+阿里云服务器（宝塔面板）">
+<meta property="og:url" content="https://aurora-white0.github.io/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/index.html">
 <meta property="og:site_name" content="Aur0ra">
-<meta property="og:description" content="努力变成高手">
+<meta property="og:description" content="Hexo 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 Markdown 作为书写语言，极大地方便了博客的撰写。静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。  在服务器上搭建 Git 环境，创建 Git 仓库 在">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-03T15:10:06.000Z">
+<meta property="article:modified_time" content="2023-05-03T15:11:33.715Z">
 <meta property="article:author" content="Aur0ra">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://aurora-white0.github.io/">
+<link rel="canonical" href="https://aurora-white0.github.io/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://aurora-white0.github.io/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/","path":"2023/05/03/Hexo+阿里云服务器（宝塔面板）/","title":"Hexo+阿里云服务器（宝塔面板）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Aur0ra</title>
+<title>Hexo+阿里云服务器（宝塔面板） | Aur0ra</title>
   
 
 
@@ -67,7 +69,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Aur0ra</h1>
+      <p class="site-title">Aur0ra</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -89,7 +91,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -102,6 +104,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">电脑配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85-Node-js-%E5%92%8C-Git"><span class="nav-number">1.1.</span> <span class="nav-text">本地安装 Node.js 和 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#node%E3%80%81npm%E3%80%81cnpm-%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">node、npm、cnpm 安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">hexo 安装使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-%E5%88%9B%E5%BB%BA%E6%96%B0%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">hexo 创建新页面</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">服务器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">安装宝塔面板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E6%98%BE%E7%A4%BA%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">可显示以下内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E8%BF%9B%E5%AE%9D%E5%A1%94%E9%A1%B5%E9%9D%A2"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">登录进宝塔页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E9%93%BE%E6%8E%A5%E8%BF%9B%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">远程链接进入服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-nginx-%E5%92%8C-git"><span class="nav-number">2.0.0.4.1.</span> <span class="nav-text">安装 nginx 和 git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA-git-%E7%94%A8%E6%88%B7"><span class="nav-number">2.0.0.4.2.</span> <span class="nav-text">添加一个 git 用户</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%99-git-%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0-ssh-%E5%AF%86%E9%92%A5"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">给 git 用户添加 ssh 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-git-%E4%BB%93%E5%BA%93"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">创建 git 仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%92%A9%E5%AD%90%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2"><span class="nav-number">2.0.0.7.</span> <span class="nav-text">配置钩子实现自动部署</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%92%A9%E5%AD%90%E6%96%87%E4%BB%B6"><span class="nav-number">2.0.0.7.1.</span> <span class="nav-text">配置钩子文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%88%E4%BA%88%E9%92%A9%E5%AD%90%E6%96%87%E4%BB%B6%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">2.0.0.7.2.</span> <span class="nav-text">授予钩子文件可执行权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-git-%E4%BB%93%E5%BA%93%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8"><span class="nav-number">2.0.0.7.3.</span> <span class="nav-text">测试 git 仓库是否可用</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0-Hexo-%E9%85%8D%E7%BD%AE%EF%BC%88%E4%BD%BF%E7%94%A8-Git-bash%E2%80%9C%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E5%8F%B3%E9%94%AE%E2%80%9D%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">本地 Hexo 配置（使用 Git bash“在文件夹中右键”）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#config-yml-%E9%85%8D%E7%BD%AE"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">_config.yml 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Git-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">配置 Git 全局变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Hexo-%E7%94%9F%E6%88%90%E3%80%81%E5%8F%91%E5%B8%83%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.0.0.4.</span> <span class="nav-text">使用 Hexo 生成、发布个人博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#package-json-%E4%B8%AD%E6%B7%BB%E5%8A%A0-npm-%E8%84%9A%E6%9C%AC"><span class="nav-number">3.0.0.5.</span> <span class="nav-text">package.json 中添加 npm 脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E8%87%AA%E5%B7%B1%E7%9A%84-IP-%E6%9F%A5%E7%9C%8B%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="nav-number">3.0.0.6.</span> <span class="nav-text">访问自己的 IP 查看是否成功</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -139,261 +142,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://aurora-white0.github.io/2023/08/09/github+hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aur0ra">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aur0ra">
-      <meta itemprop="description" content="努力变成高手">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Aur0ra">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/09/github+hexo/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-08-09 13:21:14" itemprop="dateCreated datePublished" datetime="2023-08-09T13:21:14+08:00">2023-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-07-25 12:01:00" itemprop="dateModified" datetime="2023-07-25T12:01:00+08:00">2023-07-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>hexo</p>
-<p>git</p>
-<p>Node.js</p>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>新建 username.github.io 仓库</p>
-<p>设置ssh公钥：先删除再生成新的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C tianzixu12138@outlook.com</span><br></pre></td></tr></table></figure>
-
-<p>Windows 10 ：C:&#x2F;Users&#x2F;ASUS&#x2F;.ssh</p>
-<p>在 git bash 测试 sshkey 是否添加成功，输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>第一次连接测试需要输入 yes，之后正常输出是</p>
-<p><img src="D:\BaiduSyncdisk\Typora\00_\image-20230702233102324.png" alt="image-20230702233102324"></p>
-<h2 id="配置git用户名邮箱"><a href="#配置git用户名邮箱" class="headerlink" title="配置git用户名邮箱"></a>配置git用户名邮箱</h2><p>此处为全局配置，所以可以在任意位置打开git bash, 设置用户名称和邮件地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码git config --global user.name <span class="string">&quot;haiyong&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;xxxxxx.xxx.com&quot;</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span>  // 禁用自动转换</span><br></pre></td></tr></table></figure>
-
-<p>查看</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="hexo文件夹创建"><a href="#hexo文件夹创建" class="headerlink" title="hexo文件夹创建"></a>hexo文件夹创建</h2><p>scaffolds 脚手架，也就是一个工具模板</p>
-<p>scripts 写文件的js，扩展hexo的功能</p>
-<p>source 存放博客正文内容</p>
-<p>source&#x2F;_posts 文件箱</p>
-<p>themes 存放皮肤的目录  themes&#x2F;landscape 默认的皮肤</p>
-<p>_config.yml 全局的配置文件</p>
-<p>db.json 静态常量</p>
-<p>posts目录：Hexo是一个静态博客框架，因此没有数据库。文章内容都是以文本文件方式进行存储的，直接存储在posts的目录。新增加一篇文章，就在_posts目录，新建一个xxx.md的文件。</p>
-<h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>_config.yml配置信息：（网站的配置信息，可以在此配置大部分的参数）</p>
-<ul>
-<li><p>站点信息: 定义标题，作者，语言</p>
-</li>
-<li><p>URL: URL访问路径</p>
-</li>
-<li><p>文件目录: 正文的存储目录</p>
-</li>
-<li><p>写博客配置：文章标题，文章类型，外部链接等</p>
-</li>
-<li><p>目录和标签：默认分类，分类图，标签图</p>
-</li>
-<li><p>归档设置：归档的类型</p>
-</li>
-<li><p>服务器设置：IP，访问端口，日志输出</p>
-</li>
-<li><p>时间和日期格式： 时间显示格式，日期显示格式</p>
-</li>
-<li><p>分页设置：每页显示数量</p>
-</li>
-<li><p>评论：外挂的Disqus评论系统</p>
-</li>
-<li><p>插件和皮肤：换皮肤，安装插件</p>
-</li>
-<li><p>Markdown语言：markdown的标准</p>
-</li>
-<li><p>CSS的stylus格式：是否允许压缩</p>
-</li>
-<li><p>部署配置：github发布项目地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/aurora-white0/aurora.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="启动服务器查看"><a href="#启动服务器查看" class="headerlink" title="启动服务器查看"></a>启动服务器查看</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p>启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>访问自己的网站</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://aurora-white0.github.io/</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>在仓库里添加CNAME文件并在文件中填写绑定的域名</p>
-<p>文件内容如下：（文件里填写要绑定的域名且不要包含Http:&#x2F;&#x2F;和www） 说白了就是你购买的域名，前面不要 http  和 www  </p>
-<p><img src="D:\BaiduSyncdisk\Typora\00_\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjQ2MjQ5,size_16,color_FFFFFF,t_70-1688395108495-3.png" alt="img"></p>
-<p>进入设置，找到 Custom domain添加域名后保存即可（添加CNAME文件并在文件中填写绑定的域名后应该会自动保存，看看有没有自动保存）</p>
-<p><img src="D:\BaiduSyncdisk\Typora\00_\20201221163233102.png" alt="img"></p>
-<p>3、 添加域名解析<br>ping你的<a target="_blank" rel="noopener" href="http://github.io域名,得到一个ip/">http://github.io域名，得到一个IP</a></p>
-<p><img src="D:\BaiduSyncdisk\Typora\00_\watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjQ2MjQ5,size_16,color_FFFFFF,t_70.png" alt="img"></p>
-<p>选择对应域名设置解析，解析中添加如下信息：</p>
-<p><img src="D:\BaiduSyncdisk\Typora\00_\image-20230703223720873.png" alt="image-20230703223720873"></p>
-<p>将第一列的记录值改为自己的github.io即可</p>
-<p>记录ip，参考官方文档</p>
-<p>185.199.108.153<br>185.199.109.153<br>185.199.110.153<br>185.199.111.153HTTPS 让你的网站和网站访客更安全，并且 Github 提供的这些 IP 地址自动将你的站点加入了 CDN，提高了访问速度。</p>
-<p>你还可以在 <strong>GiHub Pages</strong> 仓库的设置里**勾选 ‘Enforce HTTPS’**，这样所有访问你站点的请求都会走 HTTPS。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://aurora-white0.github.io/2023/07/03/the%20first/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aur0ra">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aur0ra">
-      <meta itemprop="description" content="努力变成高手">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Aur0ra">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/03/the%20first/" class="post-title-link" itemprop="url">spacedesk 黑白屏及自启动解决办法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2023-07-03 00:00:00 / Modified: 22:57:42" itemprop="dateCreated datePublished" datetime="2023-07-03T00:00:00+08:00">2023-07-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">软件使用</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>解决spacedesk的黑白屏和自启动问题</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/07/03/the%20first/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://aurora-white0.github.io/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -407,13 +166,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Aur0ra">
+      <meta itemprop="name" content="Hexo+阿里云服务器（宝塔面板） | Aur0ra">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/" class="post-title-link" itemprop="url">Hexo+阿里云服务器（宝塔面板）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Hexo+阿里云服务器（宝塔面板）
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -436,8 +195,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 <a target="_blank" rel="noopener" href="http://kchen.cc/2015/10/05/Markdown-Manual/#Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95">Markdown</a> 作为书写语言，极大地方便了博客的撰写。<br><strong>静态博客</strong>：是指<strong>没有后端数据库</strong>的博客，所有文章都是以<strong>文件</strong>的形式存储，是一种<strong>纯前端</strong>的博客框架。</p>
+    <div class="post-body" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 <a target="_blank" rel="noopener" href="http://kchen.cc/2015/10/05/Markdown-Manual/#Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95">Markdown</a> 作为书写语言，极大地方便了博客的撰写。<br><strong>静态博客</strong>：是指<strong>没有后端数据库</strong>的博客，所有文章都是以<strong>文件</strong>的形式存储，是一种<strong>纯前端</strong>的博客框架。</p>
 <ul>
 <li>在服务器上搭建 Git 环境，创建 Git 仓库</li>
 <li>在主机生成 Hexo 静态文件，通过与服务器连接，推到服务器上的 Git 仓库</li>
@@ -492,7 +250,6 @@
 
 <h4 id="访问自己的-IP-查看是否成功"><a href="#访问自己的-IP-查看是否成功" class="headerlink" title="访问自己的 IP 查看是否成功"></a>访问自己的 IP 查看是否成功</h4><p><code>http://47.115.202.217/</code></p>
 
-      
     </div>
 
     
@@ -500,11 +257,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/07/03/the%20first/" rel="next" title="spacedesk 黑白屏及自启动解决办法">
+                  spacedesk 黑白屏及自启动解决办法 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
