@@ -185,7 +185,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-09-11 17:38:43" itemprop="dateModified" datetime="2023-09-11T17:38:43+08:00">2023-09-11</time>
+      <time title="Modified: 2023-09-11 17:44:30" itemprop="dateModified" datetime="2023-09-11T17:44:30+08:00">2023-09-11</time>
     </span>
 
   
@@ -199,91 +199,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>title: Hexo+github网站搭建<br>date: 2023&#x2F;7&#x2F;3</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>hexo</p>
-<p>git</p>
-<p>Node.js</p>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>新建 username.github.io 仓库</p>
-<p>设置ssh公钥：先删除再生成新的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C tianzixu12138@outlook.com</span><br></pre></td></tr></table></figure>
-
-<p>Windows 10 ：C:&#x2F;Users&#x2F;ASUS&#x2F;.ssh</p>
-<p>在 git bash 测试 sshkey 是否添加成功，输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>第一次连接测试需要输入 yes，之后正常输出是</p>
-<p><img src="https://gitee.com/Aur0ra0000/images/raw/master/imgs/image-20230702233102324.png" alt="image-20230702233102324"></p>
-<h2 id="配置git用户名邮箱"><a href="#配置git用户名邮箱" class="headerlink" title="配置git用户名邮箱"></a>配置git用户名邮箱</h2><p>此处为全局配置，所以可以在任意位置打开git bash, 设置用户名称和邮件地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码git config --global user.name <span class="string">&quot;haiyong&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;xxxxxx.xxx.com&quot;</span></span><br><span class="line">git config --global core.autocrlf <span class="literal">false</span>  // 禁用自动转换</span><br></pre></td></tr></table></figure>
-
-<p>查看</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="hexo文件夹创建"><a href="#hexo文件夹创建" class="headerlink" title="hexo文件夹创建"></a>hexo文件夹创建</h2><p>scaffolds 脚手架，也就是一个工具模板</p>
-<p>scripts 写文件的js，扩展hexo的功能</p>
-<p>source 存放博客正文内容</p>
-<p>source&#x2F;_posts 文件箱</p>
-<p>themes 存放皮肤的目录  themes&#x2F;landscape 默认的皮肤</p>
-<p>_config.yml 全局的配置文件</p>
-<p>db.json 静态常量</p>
-<p>posts目录：Hexo是一个静态博客框架，因此没有数据库。文章内容都是以文本文件方式进行存储的，直接存储在posts的目录。新增加一篇文章，就在_posts目录，新建一个xxx.md的文件。</p>
-<h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>_config.yml配置信息：（网站的配置信息，可以在此配置大部分的参数）</p>
-<ul>
-<li><p>站点信息: 定义标题，作者，语言</p>
-</li>
-<li><p>URL: URL访问路径</p>
-</li>
-<li><p>文件目录: 正文的存储目录</p>
-</li>
-<li><p>写博客配置：文章标题，文章类型，外部链接等</p>
-</li>
-<li><p>目录和标签：默认分类，分类图，标签图</p>
-</li>
-<li><p>归档设置：归档的类型</p>
-</li>
-<li><p>服务器设置：IP，访问端口，日志输出</p>
-</li>
-<li><p>时间和日期格式： 时间显示格式，日期显示格式</p>
-</li>
-<li><p>分页设置：每页显示数量</p>
-</li>
-<li><p>评论：外挂的Disqus评论系统</p>
-</li>
-<li><p>插件和皮肤：换皮肤，安装插件</p>
-</li>
-<li><p>Markdown语言：markdown的标准</p>
-</li>
-<li><p>CSS的stylus格式：是否允许压缩</p>
-</li>
-<li><p>部署配置：github发布项目地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/aurora-white0/aurora.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="启动服务器查看"><a href="#启动服务器查看" class="headerlink" title="启动服务器查看"></a>启动服务器查看</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p>启动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>访问自己的网站</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://aurora-white0.github.io/</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>在仓库里添加CNAME文件并在文件中填写绑定的域名</p>
-<p>文件内容如下：（文件里填写要绑定的域名且不要包含Http:&#x2F;&#x2F;和www） 说白了就是你购买的域名，前面不要 http  和 www  </p>
-<p><img src="https://gitee.com/Aur0ra0000/images/raw/master/imgs/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjQ2MjQ5,size_16,color_FFFFFF,t_70-1688395108495-3.png" alt="img"></p>
-<p>进入设置，找到 Custom domain添加域名后保存即可（添加CNAME文件并在文件中填写绑定的域名后应该会自动保存，看看有没有自动保存）</p>
-<p><img src="https://gitee.com/Aur0ra0000/images/raw/master/imgs/20201221163233102.png" alt="img"></p>
-<p>3、 添加域名解析<br>ping你的<a target="_blank" rel="noopener" href="http://github.io域名,得到一个ip/">http://github.io域名，得到一个IP</a></p>
-<p><img src="https://gitee.com/Aur0ra0000/images/raw/master/imgs/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjQ2MjQ5,size_16,color_FFFFFF,t_70.png" alt="img"></p>
-<p>选择对应域名设置解析，解析中添加如下信息：</p>
-<p><img src="https://gitee.com/Aur0ra0000/images/raw/master/imgs/image-20230703223720873.png" alt="image-20230703223720873"></p>
-<p>将第一列的记录值改为自己的github.io即可</p>
-<p>记录ip，参考官方文档</p>
-<p>185.199.108.153<br>185.199.109.153<br>185.199.110.153<br>185.199.111.153HTTPS 让你的网站和网站访客更安全，并且 Github 提供的这些 IP 地址自动将你的站点加入了 CDN，提高了访问速度。</p>
-<p>你还可以在 <strong>GiHub Pages</strong> 仓库的设置里**勾选 ‘Enforce HTTPS’**，这样所有访问你站点的请求都会走 HTTPS。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/08/09/github+hexo/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -423,9 +346,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-05-03 23:10:06 / Modified: 23:11:33" itemprop="dateCreated datePublished" datetime="2023-05-03T23:10:06+08:00">2023-05-03</time>
+      <time title="Created: 2023-05-03 23:10:06" itemprop="dateCreated datePublished" datetime="2023-05-03T23:10:06+08:00">2023-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-09-11 17:44:21" itemprop="dateModified" datetime="2023-09-11T17:44:21+08:00">2023-09-11</time>
     </span>
 
   
@@ -438,61 +367,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 <a target="_blank" rel="noopener" href="http://kchen.cc/2015/10/05/Markdown-Manual/#Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95">Markdown</a> 作为书写语言，极大地方便了博客的撰写。<br><strong>静态博客</strong>：是指<strong>没有后端数据库</strong>的博客，所有文章都是以<strong>文件</strong>的形式存储，是一种<strong>纯前端</strong>的博客框架。</p>
-<ul>
-<li>在服务器上搭建 Git 环境，创建 Git 仓库</li>
-<li>在主机生成 Hexo 静态文件，通过与服务器连接，推到服务器上的 Git 仓库</li>
-<li>通过 git-hooks 实现自动部署到网站资源目录</li>
-<li>Nginx 做静态文件服务器，实现外界对网站资源目录的访问</li>
-</ul>
-<p>注意：请将文章中的<code>47.115.202.217</code>改为自己的域名</p>
-<h1 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h1><h2 id="本地安装-Node-js-和-Git"><a href="#本地安装-Node-js-和-Git" class="headerlink" title="本地安装 Node.js 和 Git"></a>本地安装 Node.js 和 Git</h2><h4 id="node、npm、cnpm-安装"><a href="#node、npm、cnpm-安装" class="headerlink" title="node、npm、cnpm 安装"></a>node、npm、cnpm 安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">node.js安装教程   https://blog.csdn.net/WHF__/article/details/129362462</span><br><span class="line">node -v	#查看node版本</span><br><span class="line">npm install express -g   #安装npm</span><br><span class="line">npm -v	#查看npm版本</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	#安装淘宝的cnpm 管理器</span><br><span class="line">cnpm -v	#查看cnpm版本</span><br><span class="line">cnpm install -g hexo-cli #安装hexo框架</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="hexo-安装使用"><a href="#hexo-安装使用" class="headerlink" title="hexo 安装使用"></a>hexo 安装使用</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli #安装hexo框架</span><br><span class="line">hexo -v	#查看hexo版本</span><br><span class="line"></span><br><span class="line">#创建blog目录,名字自己起，直接建立一个文件夹即可</span><br><span class="line">windows管理员模式进入blog目录</span><br><span class="line"></span><br><span class="line">hexo init      #要在windows管理员模式，生成博客 初始化博客</span><br><span class="line">hexo generate</span><br><span class="line">hexo server    #启动本地博客服务</span><br><span class="line">http://localhost:4000/	#本地访问地址</span><br><span class="line">ctrl+c  #退出本地博客服务</span><br></pre></td></tr></table></figure>
-
-<p>也可以更改端口，命令：<code>hexo server -p 4001</code></p>
-<h4 id="hexo-创建新页面"><a href="#hexo-创建新页面" class="headerlink" title="hexo 创建新页面"></a>hexo 创建新页面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的第一篇文章&quot; #创建新的文章，在sourse-_posts文件内可编辑该markdown文件</span><br><span class="line"></span><br><span class="line">hexo clean #清理</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo server    #再次启动本地博客服务，查看变化</span><br><span class="line">http://localhost:4000/	#本地访问地址</span><br><span class="line">ctrl+c  #退出本地博客服务</span><br></pre></td></tr></table></figure>
-
-<h1 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h1><p>购买阿里云服务器</p>
-<h4 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
-
-<h4 id="可显示以下内容"><a href="#可显示以下内容" class="headerlink" title="可显示以下内容"></a>可显示以下内容</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">外网面板地址: https://IP:xxxxx/xxxxxxxx</span><br><span class="line">内网面板地址: https://IP:xxxxx/xxxxxxxx</span><br><span class="line">username: xxxxxxxx</span><br><span class="line">password: xxxxxxxx</span><br></pre></td></tr></table></figure>
-
-<h4 id="登录进宝塔页面"><a href="#登录进宝塔页面" class="headerlink" title="登录进宝塔页面"></a>登录进宝塔页面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">宝塔面板网站-&gt;添加站点</span><br><span class="line"></span><br><span class="line">域名：</span><br><span class="line">47.115.202.217</span><br><span class="line">www.47.115.202.217</span><br><span class="line"></span><br><span class="line">根目录：/www/wwwroot/47.115.202.217</span><br></pre></td></tr></table></figure>
-
-<h4 id="远程链接进入服务器"><a href="#远程链接进入服务器" class="headerlink" title="远程链接进入服务器"></a>远程链接进入服务器</h4><h5 id="安装-nginx-和-git"><a href="#安装-nginx-和-git" class="headerlink" title="安装 nginx 和 git"></a>安装 nginx 和 git</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx git</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<h5 id="添加一个-git-用户"><a href="#添加一个-git-用户" class="headerlink" title="添加一个 git 用户"></a>添加一个 git 用户</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">adduser git   #添加git用户</span><br><span class="line"># 设置git用户名、密码、邮箱的配置</span><br><span class="line">$ git config user.name &quot;xxxxxx&quot;</span><br><span class="line">$ git config user.password &quot;xxxxx&quot;</span><br><span class="line">$ git config user.email &quot;&quot;xxxxxxxxxx@xx.com&quot;&quot;</span><br><span class="line"></span><br><span class="line">chmod 740 /etc/sudoers  #改变sudoers文件的权限为文件所有者可写</span><br><span class="line">vim /etc/sudoers</span><br><span class="line">#在root ALL=(ALL) ALL 下方添加一行</span><br><span class="line">git ALL=(ALL) ALL</span><br><span class="line">chmod 400 /etc/sudoers  #将其权限修改为文件所有者可读</span><br></pre></td></tr></table></figure>
-
-<h4 id="给-git-用户添加-ssh-密钥"><a href="#给-git-用户添加-ssh-密钥" class="headerlink" title="给 git 用户添加 ssh 密钥"></a>给 git 用户添加 ssh 密钥</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#在主机端打开powershell，cd到C:\Users\admin\.ssh生成密匙，如已有密匙可跳过这一步</span><br><span class="line">ssh-keygen -t rsa -C &quot;47.115.202.217&quot;</span><br><span class="line"># -t 指定密钥类型，默认是 rsa ，可以省略</span><br><span class="line"># -C 用于识别这个密钥的注释，可以输入任何内容</span><br><span class="line"># -f 指定密钥文件存储文件名，默认id_rsa</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">su git  #切换到git用户</span><br><span class="line">mkdir -p ~/.ssh</span><br><span class="line">touch ~/.ssh/authorized_keys #创建authorized_keys文件</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys  #为authorized_keys文件赋予文件所有者可读可写的权限</span><br><span class="line">chmod 700 ~/.ssh  #为.ssh文件夹赋予文件夹所有者可读可写可执行的权限</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">复制公匙id_rsa.pub内容到宝塔界面服务器/home/git/.ssh/authorized_keys</span><br><span class="line">关闭终端，使用ssh git@server重新登录服务器</span><br><span class="line">ssh git@47.115.202.217</span><br><span class="line">测试是否能不要密码登录到git用户</span><br></pre></td></tr></table></figure>
-
-<h4 id="创建-git-仓库"><a href="#创建-git-仓库" class="headerlink" title="创建 git 仓库"></a>创建 git 仓库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/git/repos    #新建目录，这是git仓库的位置</span><br><span class="line">cd /home/git/repos</span><br><span class="line">git init --bare hexo.git #初始化一个名叫hexo的仓库</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置钩子实现自动部署"><a href="#配置钩子实现自动部署" class="headerlink" title="配置钩子实现自动部署"></a>配置钩子实现自动部署</h4><h5 id="配置钩子文件"><a href="#配置钩子文件" class="headerlink" title="配置钩子文件"></a>配置钩子文件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">找到 /home/git/repos/taiblog.git/hooks/post-update.sample</span><br><span class="line">改名post-update</span><br><span class="line">内容改为</span><br><span class="line">#!/bin/sh</span><br><span class="line">git --work-tree=/www/wwwroot/47.115.202.217 --git-dir=/home/git/repos/hexo.git checkout -f</span><br><span class="line"></span><br><span class="line">即：让钩子文件删除/www/wwwroot/47.115.202.217目录下原有的文件</span><br><span class="line">然后从hexo.git仓库 clone 新的博客静态文件到/www/wwwroot/47.115.202.217目录下</span><br></pre></td></tr></table></figure>
-
-<h5 id="授予钩子文件可执行权限"><a href="#授予钩子文件可执行权限" class="headerlink" title="授予钩子文件可执行权限"></a>授予钩子文件可执行权限</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd hexo.git/hooks/</span><br><span class="line">chmod +x ~/hexo.git/hooks/post-update  #赋予其可执行权限</span><br><span class="line">chown -R git:git /home/git/repos/ #仓库所有者改为git</span><br><span class="line">chown -R git:git /www/wwwroot/47.115.202.217/ #站点文件夹所有者改为git</span><br><span class="line"></span><br><span class="line">要注意现在文件的所有者，在宝塔面板里查看，要在它现在所有者root下更改到git</span><br></pre></td></tr></table></figure>
-
-<h5 id="测试-git-仓库是否可用"><a href="#测试-git-仓库是否可用" class="headerlink" title="测试 git 仓库是否可用"></a>测试 git 仓库是否可用</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone git@47.115.202.217:/home/git/repos/hexo.git</span><br><span class="line">如果能将仓库拉下来，说明Git仓库搭建成功</span><br></pre></td></tr></table></figure>
-
-<h1 id="本地-Hexo-配置（使用-Git-bash“在文件夹中右键”）"><a href="#本地-Hexo-配置（使用-Git-bash“在文件夹中右键”）" class="headerlink" title="本地 Hexo 配置（使用 Git bash“在文件夹中右键”）"></a>本地 Hexo 配置（使用 Git bash“在文件夹中右键”）</h1><h4 id="config-yml-配置"><a href="#config-yml-配置" class="headerlink" title="_config.yml 配置"></a>_config.yml 配置</h4><p>修改主机端 Hexo 博客文件夹中的<code>\_config.yml</code>文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@47.115.202.217:/home/git/repos/hexo.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>本地计算机安装插件: <code>hexo-deployer-git</code> 和 <code>hexo-server</code>。在 MyHexoBlogs 文件夹下右键打开 GitBash，输入以下命令：<br><em>这俩插件的作用分别是使用 Git 自动部署，和 hexo 本地简单的服务器。</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$cnpm install hexo-deployer-git --save</span><br><span class="line">$cnpm install hexo-server</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置-Git-全局变量"><a href="#配置-Git-全局变量" class="headerlink" title="配置 Git 全局变量"></a>配置 Git 全局变量</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.email &quot;xxxxxxxxxx@xx.com&quot;</span><br><span class="line">$ git config --global user.name “xxxxx”</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用-Hexo-生成、发布个人博客"><a href="#使用-Hexo-生成、发布个人博客" class="headerlink" title="使用 Hexo 生成、发布个人博客"></a>使用 Hexo 生成、发布个人博客</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  #清除缓存</span><br><span class="line">hexo generate #生成静态页面</span><br><span class="line">hexo delopy  #将本地静态页面目录部署到云服务器</span><br></pre></td></tr></table></figure>
-
-<h4 id="package-json-中添加-npm-脚本"><a href="#package-json-中添加-npm-脚本" class="headerlink" title="package.json 中添加 npm 脚本"></a>package.json 中添加 npm 脚本</h4><p>也可以在<code>package.json </code>中添加 npm 脚本，这样就可以直接<code>npm run dd</code>一下执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;hexo generate&quot;,</span><br><span class="line">    &quot;clean&quot;: &quot;hexo clean&quot;,</span><br><span class="line">    &quot;deploy&quot;: &quot;hexo deploy&quot;,</span><br><span class="line">    &quot;dd&quot;: &quot;hexo clean &amp;&amp; hexo g -d&quot;,</span><br><span class="line">    &quot;server&quot;: &quot;hexo server&quot;,</span><br><span class="line">    &quot;ss&quot;: &quot;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&quot;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-<h4 id="访问自己的-IP-查看是否成功"><a href="#访问自己的-IP-查看是否成功" class="headerlink" title="访问自己的 IP 查看是否成功"></a>访问自己的 IP 查看是否成功</h4><p><code>http://47.115.202.217/</code></p>
-
+          <p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 是一个极速、简单且强大的静态博客架构。它使用 Node.js 作为构建引擎，上百个文件在几秒钟内便可构建完成；而且拥有着丰富的插件库，因开源而显得生机勃勃，可扩展性很好；最重要的，它支持 <a target="_blank" rel="noopener" href="http://kchen.cc/2015/10/05/Markdown-Manual/#Markdown-%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95">Markdown</a> 作为书写语言，极大地方便了博客的撰写。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/05/03/Hexo+%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%EF%BC%89/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
